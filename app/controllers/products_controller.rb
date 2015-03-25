@@ -28,6 +28,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(product_params)
     @products = Product.all
+    @products = Product.all
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
