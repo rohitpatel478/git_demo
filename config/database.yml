@@ -1,0 +1,5 @@
+development:
+  adapter: mysql2
+  database: demo_app
+  username: root
+  password: root

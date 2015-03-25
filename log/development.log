@@ -1,0 +1,2233 @@
+  [1m[36m (73.2ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (124.1ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations`  ON `schema_migrations` (`version`) 
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to CreateProducts (20150309144044)
+  [1m[35m (81.0ms)[0m  CREATE TABLE `products` (`id` int(11) auto_increment PRIMARY KEY, `name` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `schema_migrations` (`version`) VALUES ('20150309144044')
+  [1m[36m (29.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT `schema_migrations`.* FROM `schema_migrations`
+  [1m[36m (0.3ms)[0m  [1mSELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'demo_app'
+  AND fk.table_name = 'products'
+[0m
+  [1m[35m (0.2ms)[0m  SHOW CREATE TABLE `products`
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-17 13:58:18 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (6.4ms)
+Completed 200 OK in 66ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 13:58:26 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 807ms (Views: 804.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 13:58:27 +0530
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 13:58:27 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 13:58:27 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 13:58:27 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 13:58:27 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 13:58:27 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 13:58:27 +0530
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-17 13:58:27 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 13:58:27 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 14:09:36 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 70ms (Views: 69.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 14:09:36 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 14:09:36 +0530
+
+
+Started GET "/assets/rrssb.min-aa8ba68712b9f97b44f0d09b3803f1fa.js?body=1" for 127.0.0.1 at 2015-03-17 14:09:36 +0530
+
+
+Started GET "/assets/application-bb745f7c7e78fbe6bb417fc18f3ff324.js?body=1" for 127.0.0.1 at 2015-03-17 14:09:36 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 14:09:36 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 14:09:36 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 14:09:36 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 14:09:36 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 14:09:36 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 14:09:36 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 14:09:38 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 14:09:38 +0530
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 14:09:38 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 14:09:38 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 14:09:38 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 14:09:38 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 14:09:38 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 14:09:38 +0530
+
+
+Started GET "/assets/rrssb.min-aa8ba68712b9f97b44f0d09b3803f1fa.js?body=1" for 127.0.0.1 at 2015-03-17 14:09:38 +0530
+
+
+Started GET "/assets/application-bb745f7c7e78fbe6bb417fc18f3ff324.js?body=1" for 127.0.0.1 at 2015-03-17 14:09:38 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 14:09:38 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 14:10:26 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 60ms (Views: 59.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 14:10:26 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 14:10:26 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 14:10:26 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 14:10:26 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 14:10:26 +0530
+
+
+Started GET "/assets/rrssb.min-aa8ba68712b9f97b44f0d09b3803f1fa.js?body=1" for 127.0.0.1 at 2015-03-17 14:10:26 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 14:10:26 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 14:10:26 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 14:10:26 +0530
+
+
+Started GET "/assets/application-bb745f7c7e78fbe6bb417fc18f3ff324.js?body=1" for 127.0.0.1 at 2015-03-17 14:10:26 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 14:10:42 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 14:10:42 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 14:10:42 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 14:10:42 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 14:10:42 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 14:10:42 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 14:10:42 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 14:10:42 +0530
+
+
+Started GET "/assets/rrssb.min-aa8ba68712b9f97b44f0d09b3803f1fa.js?body=1" for 127.0.0.1 at 2015-03-17 14:10:42 +0530
+
+
+Started GET "/assets/application-bb745f7c7e78fbe6bb417fc18f3ff324.js?body=1" for 127.0.0.1 at 2015-03-17 14:10:42 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 14:10:42 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 14:11:11 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:11 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:11 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:11 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:11 +0530
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:11 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:11 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:11 +0530
+
+
+Started GET "/assets/rrssb.min-aa8ba68712b9f97b44f0d09b3803f1fa.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:11 +0530
+
+
+Started GET "/assets/application-bb745f7c7e78fbe6bb417fc18f3ff324.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:11 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:11 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 14:11:14 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 49ms (Views: 47.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:14 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:14 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:14 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:14 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:14 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:14 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:14 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:14 +0530
+
+
+Started GET "/assets/rrssb.min-aa8ba68712b9f97b44f0d09b3803f1fa.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:14 +0530
+
+
+Started GET "/assets/application-bb745f7c7e78fbe6bb417fc18f3ff324.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:14 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 14:11:36 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 66ms (Views: 65.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:36 +0530
+
+
+Started GET "/assets/application-4fa47869edd5b5731fe3305d773a2c04.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:36 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:36 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:36 +0530
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:36 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:36 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:36 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:36 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:36 +0530
+
+
+Started GET "/assets/rrssb.min-aa8ba68712b9f97b44f0d09b3803f1fa.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:36 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 14:11:44 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 96ms (Views: 77.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:44 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:44 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:44 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:45 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:45 +0530
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 14:11:45 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:45 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:45 +0530
+
+
+Started GET "/assets/rrssb.min-aa8ba68712b9f97b44f0d09b3803f1fa.js?body=1" for 127.0.0.1 at 2015-03-17 14:11:45 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 14:12:23 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 42ms (Views: 41.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 14:12:23 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:23 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:23 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 14:12:23 +0530
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 14:12:23 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 14:12:23 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:23 +0530
+
+
+Started GET "/assets/rrssb.min-aa8ba68712b9f97b44f0d09b3803f1fa.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:23 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:23 +0530
+
+
+Started GET "/assets/application-4fa47869edd5b5731fe3305d773a2c04.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:23 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 14:12:39 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (2.0ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 51ms (Views: 49.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 14:12:39 +0530
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 14:12:39 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 14:12:39 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:39 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:39 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 14:12:39 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:39 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:39 +0530
+
+
+Started GET "/assets/rrssb.min-aa8ba68712b9f97b44f0d09b3803f1fa.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:39 +0530
+
+
+Started GET "/assets/application-4fa47869edd5b5731fe3305d773a2c04.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:39 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 14:12:44 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 14:12:44 +0530
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 14:12:44 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 14:12:45 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:45 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:45 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 14:12:45 +0530
+
+
+Started GET "/assets/rrssb.min-aa8ba68712b9f97b44f0d09b3803f1fa.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:45 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:45 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:45 +0530
+
+
+Started GET "/assets/application-4fa47869edd5b5731fe3305d773a2c04.js?body=1" for 127.0.0.1 at 2015-03-17 14:12:45 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 14:53:23 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (114.5ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (24.0ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (174.3ms)
+Completed 200 OK in 3589ms (Views: 2918.7ms | ActiveRecord: 52.7ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 14:53:40 +0530
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 14:53:40 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 14:53:40 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 14:53:40 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 14:53:40 +0530
+
+
+Started GET "/assets/rrssb.min-aa8ba68712b9f97b44f0d09b3803f1fa.js?body=1" for 127.0.0.1 at 2015-03-17 14:53:40 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 14:53:40 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 14:53:40 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 14:53:40 +0530
+
+
+Started GET "/assets/application-4fa47869edd5b5731fe3305d773a2c04.js?body=1" for 127.0.0.1 at 2015-03-17 14:53:40 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 15:00:08 +0530
+
+
+Started GET "/assets/application-f78e0e8b49349bf63afc05619dfb2a62.css?body=1" for 127.0.0.1 at 2015-03-17 15:00:09 +0530
+
+
+Started GET "/assets/rrssb-4213eb4b177a716ab95d833bf9a254ee.css?body=1" for 127.0.0.1 at 2015-03-17 15:00:09 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 15:00:09 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-17 15:03:29 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 77ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:03:45 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 528ms (Views: 421.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 15:03:46 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 15:03:46 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 15:03:46 +0530
+
+
+Started GET "/assets/application-001948a807d6467a657420955d9f0c1c.js?body=1" for 127.0.0.1 at 2015-03-17 15:03:46 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 15:03:46 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 15:03:46 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 15:03:46 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 15:03:46 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:31:39 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (71.4ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (294.5ms)
+Completed 500 Internal Server Error in 370ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( share.min.js )` to `config/initializers/assets.rb` and restart your server):
+    26: 
+    27: <%= link_to 'New Product', new_product_path %>
+    28: 
+    29: <%=javascript_include_tag "share.min.js"%>
+  app/views/products/index.html.erb:29:in `_app_views_products_index_html_erb__3484433226890408706_69988617772340'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (22.8ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.9ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (15.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (35.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:32:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (36.4ms)
+Completed 200 OK in 294ms (Views: 243.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 15:32:15 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 15:32:15 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 15:32:15 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 15:32:15 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 15:32:15 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 15:32:15 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 15:32:15 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 15:32:15 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:42:17 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 15:42:17 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:17 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:17 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:17 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:17 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 15:42:17 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:42:19 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 15:42:19 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:19 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:20 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:20 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 15:42:20 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 15:42:20 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:20 +0530
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:20 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:20 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:42:21 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 15:42:21 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:21 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:21 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:21 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 15:42:21 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 15:42:21 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:21 +0530
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:21 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:21 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:42:23 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 15:42:23 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 15:42:23 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 15:42:23 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:23 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:23 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:23 +0530
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:23 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:23 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 15:42:23 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:46:18 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 15:46:18 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 15:46:18 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 15:46:18 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 15:46:18 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 15:46:18 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 15:46:18 +0530
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 15:46:18 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 15:46:18 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 15:46:18 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 15:46:24 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:48:36 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (24.4ms)
+Completed 500 Internal Server Error in 26ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( check.js )` to `config/initializers/assets.rb` and restart your server):
+    26: 
+    27: <%= link_to 'New Product', new_product_path %>
+    28: 
+    29: <%=javascript_include_tag "share.min.js","check.js"%>
+    30: 
+    31: 
+    32: <!DOCTYPE html>
+  app/views/products/index.html.erb:29:in `_app_views_products_index_html_erb___1219362402953871777_36830160'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (37.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.6ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (13.8ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (42.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:48:49 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 77ms (Views: 75.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 15:48:49 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 15:48:49 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 15:48:49 +0530
+
+
+Started GET "/build/share.js" for 127.0.0.1 at 2015-03-17 15:48:49 +0530
+
+ActionController::RoutingError (No route matches [GET] "/build/share.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (92.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (183.9ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (13.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (28.2ms)
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 15:48:50 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 15:48:50 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 15:48:50 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 15:48:50 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 15:48:50 +0530
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 15:48:50 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 15:48:50 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:49:41 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 50ms (Views: 47.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 15:49:41 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 15:49:41 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 15:49:41 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 15:49:41 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 15:49:41 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 15:49:41 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 15:49:41 +0530
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 15:49:41 +0530
+
+
+Started GET "/build/share.js" for 127.0.0.1 at 2015-03-17 15:49:41 +0530
+
+ActionController::RoutingError (No route matches [GET] "/build/share.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.5ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (13.6ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (28.7ms)
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 15:49:42 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:52:06 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 15:52:06 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 15:52:06 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 15:52:06 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 15:52:06 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 15:52:06 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 15:52:06 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 15:52:06 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 15:52:06 +0530
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 15:52:07 +0530
+
+
+Started GET "/build/share.js" for 127.0.0.1 at 2015-03-17 15:52:07 +0530
+
+ActionController::RoutingError (No route matches [GET] "/build/share.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.5ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (15.6ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (37.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 15:58:50 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 56ms (Views: 55.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/build/share.js" for 127.0.0.1 at 2015-03-17 15:58:51 +0530
+
+ActionController::RoutingError (No route matches [GET] "/build/share.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.5ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (26.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (15.0ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (30.1ms)
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 15:58:51 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 15:58:51 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 15:58:51 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 15:58:51 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 15:58:51 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 15:58:51 +0530
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 15:58:51 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 15:58:51 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 15:58:51 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-17 22:58:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (6.9ms)
+Completed 200 OK in 73ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 22:58:32 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (78.8ms)
+Completed 200 OK in 332ms (Views: 309.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/build/share.js" for 127.0.0.1 at 2015-03-17 22:58:33 +0530
+
+ActionController::RoutingError (No route matches [GET] "/build/share.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.0ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.0ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (41.0ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (22.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.8ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (47.1ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 22:58:33 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 22:58:33 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 22:58:33 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 22:58:33 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 22:58:33 +0530
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 22:58:33 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 22:58:33 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 22:58:33 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 22:58:33 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 22:58:37 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 22:58:37 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 22:58:37 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 22:59:05 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 22:59:05 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 22:59:05 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 22:59:05 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 22:59:05 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 22:59:05 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 22:59:05 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 22:59:05 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 22:59:05 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 22:59:05 +0530
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 22:59:05 +0530
+
+
+Started GET "/build/share.js" for 127.0.0.1 at 2015-03-17 22:59:05 +0530
+
+ActionController::RoutingError (No route matches [GET] "/build/share.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.6ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (36.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (24.6ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (47.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:05:35 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 46ms (Views: 45.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:05:35 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 23:05:35 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:05:35 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:05:35 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:05:35 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:05:35 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:05:35 +0530
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 23:05:35 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:05:35 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:05:35 +0530
+
+
+Started GET "/build/share.js" for 127.0.0.1 at 2015-03-17 23:05:35 +0530
+
+ActionController::RoutingError (No route matches [GET] "/build/share.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (52.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.5ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.6ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (17.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.9ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (42.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:07:04 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 53ms (Views: 52.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:07:05 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 23:07:05 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:05 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:05 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:05 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:05 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:05 +0530
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:05 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:05 +0530
+
+
+Started GET "/build/share.js" for 127.0.0.1 at 2015-03-17 23:07:05 +0530
+
+ActionController::RoutingError (No route matches [GET] "/build/share.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.1ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.5ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (14.8ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (1.1ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (32.0ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:07:05 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:07:43 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:07:43 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 23:07:43 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:43 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:07:43 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:43 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:43 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:43 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:43 +0530
+
+
+Started GET "/build/share.js" for 127.0.0.1 at 2015-03-17 23:07:43 +0530
+
+ActionController::RoutingError (No route matches [GET] "/build/share.js"):
+  actionpack (4.2.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.1.1) lib/web_console/middleware.rb:37:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.0) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.0) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.0) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.0) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.0) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.0) lib/action_dispatch/middleware/static.rb:113:in `call'
+  rack (1.6.0) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.0) lib/rails/engine.rb:518:in `call'
+  railties (4.2.0) lib/rails/application.rb:164:in `call'
+  rack (1.6.0) lib/rack/lock.rb:17:in `call'
+  rack (1.6.0) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.0) lib/rack/handler/webrick.rb:89:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /home/neosoft/.rvm/rubies/ruby-2.2.0/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.5ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (34.1ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.6ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.6ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.8ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (19.1ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.6ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (41.8ms)
+
+
+Started GET "/assets/application-8709df0bd88e86c9814bb9813cb1edca.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:43 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:07:43 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:09:06 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 73ms (Views: 71.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:09:06 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:09:06 +0530
+
+
+Started GET "/assets/application-afb04b09b68562b112cbd59715d2f778.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:06 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 23:09:06 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:06 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:06 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:06 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:06 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:06 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:06 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:09:08 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.7ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:09:08 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:09:08 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 23:09:08 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:08 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:08 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:08 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:08 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:08 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:09:08 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:11:18 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 48ms (Views: 47.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:11:19 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 23:11:19 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:11:19 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:11:19 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:11:19 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:11:19 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:11:19 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:11:19 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:11:19 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:12:22 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:12:22 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:12:22 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:12:22 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 23:12:22 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:12:22 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:12:22 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:12:22 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:12:22 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:12:22 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:13:27 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:13:27 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:13:27 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 23:13:27 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:13:27 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:13:27 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:13:27 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:13:27 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:13:27 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:13:27 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:16:03 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:16:03 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:16:03 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:16:03 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:16:03 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:16:03 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:16:03 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 23:16:03 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:16:03 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:16:03 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:16:11 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:16:11 +0530
+
+
+Started GET "/assets/application-e0eec18954eb8be15f3911e5c6573c4f.css?body=1" for 127.0.0.1 at 2015-03-17 23:16:11 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:18:02 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (1.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (42.8ms)
+Completed 500 Internal Server Error in 45ms
+
+ActionView::Template::Error (undefined method `stylesheet_include_tag' for #<#<Class:0x0000000392cd38>:0x007fa38c8405f8>):
+    33: <html>
+    34: <head>
+    35:   <title>Share Button Test</title>
+    36:   <%=stylesheet_include_tag "sharing.css"%>
+    37:   <meta name='description' content='A simple, light, flexible, and good-looking share button'>
+    38:   <meta name='og:image' content='http://carrot.is/img/fb-share.jpg'>
+    39:   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:700&text=new+Share(".share-button");' rel='stylesheet' type='text/css'>
+  app/views/products/index.html.erb:36:in `_app_views_products_index_html_erb__4569903875137352338_70170206918820'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (13.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (26.7ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:18:42 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (15.8ms)
+Completed 500 Internal Server Error in 17ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( sharing.css )` to `config/initializers/assets.rb` and restart your server):
+    33: <html>
+    34: <head>
+    35:   <title>Share Button Test</title>
+    36:   <%=stylesheet_link_tag "sharing.css"%>
+    37:   <meta name='description' content='A simple, light, flexible, and good-looking share button'>
+    38:   <meta name='og:image' content='http://carrot.is/img/fb-share.jpg'>
+    39:   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:700&text=new+Share(".share-button");' rel='stylesheet' type='text/css'>
+  app/views/products/index.html.erb:36:in `_app_views_products_index_html_erb__4569903875137352338_70170209903400'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (13.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (26.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:19:03 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (Asset filtered out and will not be served: add `Rails.application.config.assets.precompile += %w( sharing.css )` to `config/initializers/assets.rb` and restart your server):
+    33: <html>
+    34: <head>
+    35:   <title>Share Button Test</title>
+    36:   <%=stylesheet_link_tag "sharing.css"%>
+    37:   <meta name='description' content='A simple, light, flexible, and good-looking share button'>
+    38:   <meta name='og:image' content='http://carrot.is/img/fb-share.jpg'>
+    39:   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:700&text=new+Share(".share-button");' rel='stylesheet' type='text/css'>
+  app/views/products/index.html.erb:36:in `_app_views_products_index_html_erb__4569903875137352338_70170209903400'
+
+
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (22.4ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_markup.html (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/style.css within layouts/inlined_string (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_inner_console_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/_prompt_box_markup.html within layouts/inlined_string (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/console.js within layouts/javascript (13.1ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/main.js within layouts/javascript (0.2ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/error_page.js within layouts/javascript (0.3ms)
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/web-console-2.1.1/lib/web_console/templates/index.html (26.4ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:19:12 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 144ms (Views: 124.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/sharing-a656507713502cf7ffe83e62eb684822.css?body=1" for 127.0.0.1 at 2015-03-17 23:19:12 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:19:12 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:19:12 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:19:12 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:19:12 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:19:12 +0530
+
+
+Started GET "/assets/application-aa064034fc48c488f2a22705eccb1dea.css?body=1" for 127.0.0.1 at 2015-03-17 23:19:12 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:19:12 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:19:12 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:19:12 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:20:14 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.2ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 62ms (Views: 61.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:20:14 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:20:14 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:20:14 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:20:14 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:20:14 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:20:14 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:20:14 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:20:14 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:21:45 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 59ms (Views: 57.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:21:45 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:21:45 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:21:45 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:21:45 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:21:45 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:21:45 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:21:45 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:21:45 +0530
+
+
+Started GET "/products?fb_ref=Default" for 127.0.0.1 at 2015-03-17 23:21:58 +0530
+Processing by ProductsController#index as HTML
+  Parameters: {"fb_ref"=>"Default"}
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 98ms (Views: 97.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:21:59 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:21:59 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:21:59 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:21:59 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:21:59 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:21:59 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:21:59 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:21:59 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:28:19 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:28:19 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:28:19 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:28:19 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:28:19 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:28:19 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:28:19 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:28:19 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:28:19 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:43:05 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:43:05 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-17 23:48:20 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.7ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 101ms (Views: 99.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:48:20 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:48:20 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:48:20 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:48:20 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:48:20 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:48:20 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:48:20 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:48:20 +0530
+
+
+Started GET "/products?fb_ref=Default" for 127.0.0.1 at 2015-03-17 23:49:35 +0530
+Processing by ProductsController#index as HTML
+  Parameters: {"fb_ref"=>"Default"}
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 100ms (Views: 99.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-17 23:49:35 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-17 23:49:35 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-17 23:49:35 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-17 23:49:35 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-17 23:49:35 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-17 23:49:35 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-17 23:49:35 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-17 23:49:35 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-18 00:01:11 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 70ms (Views: 69.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-18 00:01:11 +0530
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 00:01:11 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 00:01:11 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 00:01:11 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-18 00:01:11 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 00:01:11 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 00:01:11 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-18 00:01:11 +0530
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-18 00:30:57 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 56ms (Views: 55.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-18 00:30:58 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-18 00:30:58 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-18 00:30:58 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-18 00:30:58 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-18 00:30:58 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-18 00:30:58 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-18 00:30:58 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-18 00:30:58 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-24 14:39:39 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (2.0ms)
+Completed 200 OK in 61ms (Views: 38.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-24 14:39:47 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.3ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (102.3ms)
+Completed 200 OK in 401ms (Views: 369.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/products-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for 127.0.0.1 at 2015-03-24 14:39:48 +0530
+
+
+Started GET "/assets/scaffolds-23714373e2d74201a4bdaa6c70067e2e.css?body=1" for 127.0.0.1 at 2015-03-24 14:39:48 +0530
+
+
+Started GET "/assets/sharing-a656507713502cf7ffe83e62eb684822.css?body=1" for 127.0.0.1 at 2015-03-24 14:39:48 +0530
+
+
+Started GET "/assets/application-aa064034fc48c488f2a22705eccb1dea.css?body=1" for 127.0.0.1 at 2015-03-24 14:39:48 +0530
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for 127.0.0.1 at 2015-03-24 14:39:48 +0530
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for 127.0.0.1 at 2015-03-24 14:39:48 +0530
+
+
+Started GET "/assets/check-64e62ddc273c2f5847f30d698ca14b67.js?body=1" for 127.0.0.1 at 2015-03-24 14:39:48 +0530
+
+
+Started GET "/assets/products-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for 127.0.0.1 at 2015-03-24 14:39:48 +0530
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for 127.0.0.1 at 2015-03-24 14:39:48 +0530
+
+
+Started GET "/assets/share.min-34c84c2b6ab02f4ad5aba7358e5dcf08.js?body=1" for 127.0.0.1 at 2015-03-24 14:39:48 +0530
+
+
+Started GET "/assets/application-afb04b09b68562b112cbd59715d2f778.js?body=1" for 127.0.0.1 at 2015-03-24 14:39:48 +0530
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-24 14:40:35 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (9.5ms)
+Completed 200 OK in 35ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-24 14:40:40 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.1ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 107ms (Views: 104.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-03-24 14:59:03 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /home/neosoft/.rvm/gems/ruby-2.2.0/gems/railties-4.2.0/lib/rails/templates/rails/welcome/index.html.erb (9.7ms)
+Completed 200 OK in 34ms (Views: 17.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-24 14:59:07 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 113ms (Views: 109.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-24 15:02:29 +0530
+Processing by ProductsController#index as HTML
+  [1m[36mProduct Load (0.3ms)[0m  [1mSELECT `products`.* FROM `products`[0m
+  Rendered products/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 61ms (Views: 59.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/products" for 127.0.0.1 at 2015-03-24 15:02:39 +0530
+Processing by ProductsController#index as HTML
+  [1m[35mProduct Load (0.2ms)[0m  SELECT `products`.* FROM `products`
+  Rendered products/index.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 59ms (Views: 58.3ms | ActiveRecord: 0.2ms)

@@ -1,0 +1,58 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Products</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %>
+
+<%=javascript_include_tag "share.min.js"%>
+
+
+<head>
+  <title>Share Button Test</title>
+  <%=stylesheet_link_tag "sharing.css"%>
+  <meta name='description' content='A simple, light, flexible, and good-looking share button'>
+  <meta name='og:image' content='http://carrot.is/img/fb-share.jpg'>
+  <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:700&text=new+Share(".share-button");' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <a class='fork' href="https://github.com/carrot/share-button">
+    <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://www.sharebutton.co/images/fork-me.png" alt="Fork me on GitHub">
+  </a>
+  <div class='share-button'></div>
+  <pre><span class="new">new</span> <span class="class">Share</span>(<span class="string">".share-button"</span>);</pre>
+  <script>
+    var share = new Share(".share-button", {
+      networks: {
+        facebook: {
+          app_id: "1480391125545892",
+          image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSETFZIrsePTP3Mu4UDSeU9Ubfi9mkHAZRTQwTFGSYLVzjMbaqT",
+          description: "facebook sharing",
+          title: "sgdreamboard"
+        }
+      }
+    });
+  </script>
+</body>
+
